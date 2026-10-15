@@ -15,7 +15,8 @@ export function repor() {
 }
 
 export function criarContador(inicial = VALOR_INICIAL) {
-  let valor = Math.max(MINIMO, inicial);
+  // Valores que não sejam inteiros (NaN, 2.5, '3', ...) começam no valor inicial.
+  let valor = Number.isInteger(inicial) ? Math.max(MINIMO, inicial) : VALOR_INICIAL;
   return {
     get valor() {
       return valor;

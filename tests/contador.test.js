@@ -30,6 +30,13 @@ describe('criarContador', () => {
     expect(criarContador(-5).valor).toBe(0);
   });
 
+  it('valor inicial que não seja inteiro começa em 0', () => {
+    for (const inicial of [NaN, 2.5, Infinity, '3', null]) {
+      expect(criarContador(inicial).valor).toBe(0);
+    }
+    expect(criarContador(4).valor).toBe(4);
+  });
+
   it('+1, -1 e repor alteram o estado', () => {
     const c = criarContador();
     c.incrementar();
