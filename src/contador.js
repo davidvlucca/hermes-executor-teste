@@ -6,6 +6,10 @@ export function incrementar(valor) {
   return valor + 1;
 }
 
+export function somar10(valor) {
+  return valor + 10;
+}
+
 export function decrementar(valor) {
   return Math.max(MINIMO, valor - 1);
 }
@@ -23,6 +27,10 @@ export function criarContador(inicial = VALOR_INICIAL) {
     },
     incrementar() {
       valor = incrementar(valor);
+      return valor;
+    },
+    somar10() {
+      valor = somar10(valor);
       return valor;
     },
     decrementar() {

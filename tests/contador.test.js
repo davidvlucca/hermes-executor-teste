@@ -1,10 +1,15 @@
 import { describe, expect, it } from 'vitest';
-import { criarContador, decrementar, incrementar, repor } from '../src/contador.js';
+import { criarContador, decrementar, incrementar, repor, somar10, VALOR_INICIAL } from '../src/contador.js';
 
 describe('funções puras', () => {
   it('incrementar soma 1', () => {
     expect(incrementar(0)).toBe(1);
     expect(incrementar(5)).toBe(6);
+  });
+
+  it('somar10 soma 10', () => {
+    expect(somar10(0)).toBe(10);
+    expect(somar10(5)).toBe(15);
   });
 
   it('decrementar subtrai 1', () => {
@@ -54,5 +59,13 @@ describe('criarContador', () => {
     for (let i = 0; i < 10; i++) c.decrementar();
     expect(c.valor).toBe(0);
     expect(c.incrementar()).toBe(1);
+  });
+
+  it('+10 soma 10 ao valor atual', () => {
+    const c = criarContador();
+    expect(c.somar10()).toBe(VALOR_INICIAL + 10);
+    expect(c.somar10()).toBe(VALOR_INICIAL + 20);
+    c.decrementar();
+    expect(c.valor).toBe(VALOR_INICIAL + 19);
   });
 });
