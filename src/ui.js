@@ -6,6 +6,7 @@ export function montarContador(doc) {
   const valorEl = doc.querySelector('#valor');
   const menosBtn = doc.querySelector('#menos');
   const maisBtn = doc.querySelector('#mais');
+  const mais10Btn = doc.querySelector('#mais10');
   const reporBtn = doc.querySelector('#repor');
 
   function render() {
@@ -15,6 +16,11 @@ export function montarContador(doc) {
 
   maisBtn.addEventListener('click', () => {
     contador.incrementar();
+    render();
+  });
+
+  mais10Btn.addEventListener('click', () => {
+    contador.somar10();
     render();
   });
 

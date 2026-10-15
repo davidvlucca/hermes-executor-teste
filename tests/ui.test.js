@@ -1,5 +1,6 @@
 // @vitest-environment jsdom
 import { beforeEach, describe, expect, it } from 'vitest';
+import { VALOR_INICIAL } from '../src/contador.js';
 import { montarContador } from '../src/ui.js';
 // Usa o index.html real, para apanhar ids errados ou botões em falta.
 import html from '../index.html?raw';
@@ -47,5 +48,25 @@ describe('página do contador', () => {
     clicar('#repor');
     expect(valor()).toBe('0');
     expect(document.querySelector('#menos').disabled).toBe(true);
+  });
+
+  it('+10 uma vez dá valor inicial + 10', () => {
+    clicar('#mais10');
+    expect(valor()).toBe(String(VALOR_INICIAL + 10));
+    expect(document.querySelector('#menos').disabled).toBe(false);
+  });
+
+  it('+10 duas vezes dá valor inicial + 20', () => {
+    clicar('#mais10', 2);
+    expect(valor()).toBe(String(VALOR_INICIAL + 20));
+  });
+
+  it('+10 combina com os outros botões', () => {
+    clicar('#mais10');
+    clicar('#mais');
+    clicar('#menos');
+    expect(valor()).toBe(String(VALOR_INICIAL + 10));
+    clicar('#repor');
+    expect(valor()).toBe(String(VALOR_INICIAL));
   });
 });

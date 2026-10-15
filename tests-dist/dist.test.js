@@ -47,6 +47,11 @@ describe('build em dist/', () => {
     expect(valor()).toBe('0');
   });
 
+  it('o +10 soma 10', () => {
+    clicar('#mais10', 2);
+    expect(valor()).toBe('20');
+  });
+
   it('o -1 não desce abaixo de 0', () => {
     doc.querySelector('#menos').disabled = false;
     clicar('#menos', 3);

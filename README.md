@@ -1,6 +1,6 @@
 # hermes-executor-teste
 
-Página simples com um contador (+1, -1, repor). O valor nunca desce abaixo de 0.
+Página simples com um contador (+1, +10, -1, repor). O valor nunca desce abaixo de 0.
 Feita com HTML, CSS e JavaScript, usando Vite.
 
 ## Requisitos
