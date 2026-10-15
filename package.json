@@ -1,0 +1,37 @@
+{
+  "name": "hermes-executor-teste",
+  "version": "1.0.0",
+  "description": "Contador simples com Vite",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest run --dir tests",
+    "test:dist": "vitest run --dir tests-dist",
+    "lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidvlucca/hermes-executor-teste.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/davidvlucca/hermes-executor-teste/issues"
+  },
+  "homepage": "https://github.com/davidvlucca/hermes-executor-teste#readme",
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "eslint": "10.12.0",
+    "globals": "17.13.0",
+    "jsdom": "30.1.3",
+    "vite": "8.3.4",
+    "vitest": "5.0.5"
+  },
+  "private": true,
+  "engines": {
+    "node": "^22.22.2 || ^24.15.0 || >=26"
+  }
+}
