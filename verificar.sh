@@ -12,6 +12,9 @@ npm run build
 echo "==> testes"
 npm test
 
+echo "==> teste do build (dist/)"
+npm run test:dist
+
 echo "==> lint"
 npm run lint
 

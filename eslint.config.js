@@ -13,7 +13,7 @@ export default [
     languageOptions: { globals: globals.node },
   },
   {
-    files: ['tests/**/*.js'],
+    files: ['tests/**/*.js', 'tests-dist/**/*.js'],
     languageOptions: { globals: { ...globals.node, ...globals.browser } },
   },
 ];
