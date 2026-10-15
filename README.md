@@ -5,7 +5,7 @@ Feita com HTML, CSS e JavaScript, usando Vite.
 
 ## Requisitos
 
-Node.js 22.13 ou mais recente (testado com Node 24).
+Node.js 22.22.2+, 24.15+ ou 26+ (testado com Node 24).
 
 ## Como correr
 
@@ -23,5 +23,7 @@ npm run lint      # lint (ESLint)
 
 - `index.html` — página
 - `src/contador.js` — lógica do contador (sem DOM)
-- `src/main.js` — liga a lógica aos botões
+- `src/ui.js` — liga a lógica aos botões
+- `src/main.js` — ponto de entrada da página
 - `tests/contador.test.js` — testes da lógica
+- `tests/ui.test.js` — testes de interação (jsdom) com o `index.html` real

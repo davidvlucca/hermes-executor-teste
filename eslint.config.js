@@ -9,7 +9,11 @@ export default [
     languageOptions: { globals: globals.browser },
   },
   {
-    files: ['*.js', 'tests/**/*.js'],
+    files: ['*.js'],
     languageOptions: { globals: globals.node },
+  },
+  {
+    files: ['tests/**/*.js'],
+    languageOptions: { globals: { ...globals.node, ...globals.browser } },
   },
 ];
