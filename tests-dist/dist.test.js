@@ -47,8 +47,11 @@ describe('build em dist/', () => {
     expect(valor()).toBe('0');
   });
 
-  it('o +10 soma 10', () => {
-    clicar('#mais10', 2);
+  it('o +10 soma 10 a cada clique', () => {
+    expect(valor()).toBe('0');
+    clicar('#mais10');
+    expect(valor()).toBe('10');
+    clicar('#mais10');
     expect(valor()).toBe('20');
   });
 
